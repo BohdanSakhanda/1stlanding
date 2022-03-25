@@ -196,7 +196,7 @@ a {
 		display: none;
 	}
 	.bottom-header {
-		justify-content: end;
+		padding-left: 68px;
 		background: url("../img/main/burger.svg") top 13px left 23px/ 36px no-repeat, white;
 	}
 }
