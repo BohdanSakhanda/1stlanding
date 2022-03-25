@@ -242,7 +242,7 @@ a {
 }
 .form-search__icon {
 }
-@media (max-width: 400px) {
+@media (max-width: 410px) {
 	.form-search__input input::placeholder {
 		outline: none;
 		text-align: center;
