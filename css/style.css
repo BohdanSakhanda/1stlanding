@@ -200,7 +200,7 @@ a {
 		background: url("../img/main/burger.svg") top 13px left 23px/ 36px no-repeat, white;
 	}
 }
-@media (max-width: 400px) {
+@media (max-width: 470px) {
 	.bottom-header {
 		min-height: 40px;
 		padding: 0px 4px;
