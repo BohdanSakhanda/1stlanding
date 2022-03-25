@@ -194,6 +194,7 @@ a {
 @media (max-width: 750px) {
 	.bottom-header__nav {
 		display: none;
+		justify-content: flex-end;
 		
 	}
 	.bottom-header {
