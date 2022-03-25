@@ -194,7 +194,7 @@ a {
 @media (max-width: 750px) {
 	.bottom-header__nav {
 		display: none;
-		justify-content: end;
+		justify-content: flex-end;
 	}
 	.bottom-header {
 		padding-left: 68px;
@@ -242,7 +242,7 @@ a {
 }
 .form-search__icon {
 }
-@media (max-width: 410px) {
+@media (max-width: 465px) {
 	.form-search__input input::placeholder {
 		outline: none;
 		text-align: center;
