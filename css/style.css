@@ -194,9 +194,10 @@ a {
 @media (max-width: 750px) {
 	.bottom-header__nav {
 		display: none;
-		justify-content: flex-end;
+		
 	}
 	.bottom-header {
+		justify-content: flex-end;
 		padding-left: 68px;
 		background: url("../img/main/burger.svg") top 13px left 23px/ 36px no-repeat, white;
 	}
@@ -242,8 +243,9 @@ a {
 }
 .form-search__icon {
 }
-@media (max-width: 465px) {
+@media (max-width: 470px) {
 	.form-search__input input::placeholder {
+		width:100%;
 		outline: none;
 		text-align: center;
 		visibility: visible;
