@@ -69,6 +69,7 @@ body {
 	padding-top: 26px;
 }
 .header__container {
+	padding-bottom: 312px;
 }
 @media (max-width: 450px) {
 	.header {
@@ -176,15 +177,87 @@ a {
 .bottom-header__menu {
 	display: flex;
 }
+.list__item:not(:last-child) {
+	margin-right: 37px;
+}
 .list {
 	display: flex;
 }
+
 .list__item {
+	position: relative;
 	cursor: pointer;
-	margin-right: 37px;
 }
+._shop button,
+._services button  {
+	background: white;
+	cursor: pointer;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.5;
+		letter-spacing: 0.15px;
+		color: #000000;
+}
+._shop button::after,
+._services button::after {
+	content: "";
+	display: inline-block;
+	position: relative;
+	top: -3px;
+	right: -4px;
+	width: 8px;
+	height: 5px;
+	padding-right: 10px;
+	background: url(../img/main/point_bottom_24px.svg) top no-repeat;
+}
+
+._shop ul,
+._services ul {
+	margin-top: 30px;
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	width: 93px;
+	height: 168px;
+	background: rgb(255, 255, 255);
+	left: -20px;
+	list-style: none;
+	border-radius: 5px;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-10px);
+	transition: all 0.4s ease;
+}
+._shop a,
+._services a {
+	color: black;
+}
+._services li,
+._shop li {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+._shop li:hover,
+._services li:hover {
+	width: 100%;
+	border-radius: 45px;
+	box-shadow: 0px 10px 13px -7px #000000,
+	5px 5px 15px 5px rgba(0, 0, 0, 0);
+	
+}
+._services button:focus+ul,
+._shop button:focus+ul {
+	opacity: 1;
+	pointer-events: all;
+	transform: translateY(0px);
+}
+
 @media (max-width: 950px) {
-	.list__item {
+	.list__item:not(:last-child) {
 		margin-right: calc(15px + (37 - 15) * ((100vw - 768px) / (950 - 768)));
 	}
 	.header__bottom {
@@ -194,16 +267,14 @@ a {
 @media (max-width: 750px) {
 	.bottom-header__nav {
 		display: none;
-		justify-content: flex-end;
-		
 	}
 	.bottom-header {
-		justify-content: flex-end;
-		padding-left: 68px;
+   	padding-left: 68px;
+		justify-content: flex-end;	
 		background: url("../img/main/burger.svg") top 13px left 23px/ 36px no-repeat, white;
 	}
 }
-@media (max-width: 470px) {
+@media (max-width: 410px) {
 	.bottom-header {
 		min-height: 40px;
 		padding: 0px 4px;
@@ -225,6 +296,7 @@ a {
 .form-search__input input {
 	padding: 4px;
 	background: #ffff;
+	outline-color: white;
 }
 .form-search__input input::placeholder {
 	text-align: center;
@@ -244,9 +316,8 @@ a {
 }
 .form-search__icon {
 }
-@media (max-width: 470px) {
+@media (max-width: 410px) {
 	.form-search__input input::placeholder {
-		width:100%;
 		outline: none;
 		text-align: center;
 		visibility: visible;
@@ -261,6 +332,7 @@ a {
 }
 .header__content-title {
 	max-width: 583px;
+	overflow-wrap: break-word;
 	font-weight: 900;
 	font-size: 56px;
 	line-height: 1;
@@ -280,7 +352,6 @@ a {
 	display: inline-block;
 	text-align: center;
 	filter: drop-shadow(0px 8px 16px rgba(38, 38, 38, 0.24)) drop-shadow(0px 16px 24px rgba(38, 38, 38, 0.2));
-	margin-bottom: 312px;
 }
 @media (max-width: 750px) {
 	.header__content-title {
@@ -297,6 +368,7 @@ a {
 	z-index: 5;
 }
 .who-we-are__container {
+	
 }
 .who-we-are__body::before {
 	content: "";
@@ -337,6 +409,7 @@ a {
 	background: url("../img/who_we_are/white_overline_mark.svg") -2px -2px no-repeat;
 }
 .who-we-are__header-title {
+	overflow-wrap: break-word;
 }
 .block-title__title {
 	font-weight: 900;
@@ -355,6 +428,10 @@ a {
 	margin-bottom: 54px;
 }
 .who-we-are__content-text {
+	max-width: 846px;
+	max-height: 288px;
+	overflow: hidden;
+	overflow-wrap: break-word;
 }
 .who-we-are__content-img {
 	position: relative;
@@ -390,14 +467,18 @@ a {
 	}
 	.who-we-are__content-text:not(:last-child) {
 		margin-bottom: calc(20px + (54 - 20) * ((100vw - 320px) / (1050 - 320)));
+		overflow-wrap: break-word;
 	}
 }
 
 /* ----------------------------promise---------------------------------- */
 .promise {
-	padding-top: 280px;
+	padding-top: 148px;
+	
 }
+
 .promise__container {
+	padding-top: 82px;
 	margin-bottom: 122px;
 }
 /* -------------------Promise-header------------------------- */
@@ -415,6 +496,7 @@ a {
 	background: url("../img/promise_page/purpl_overline_mark.svg") -1px -1px no-repeat;
 }
 .promise__header-title {
+	overflow-wrap: break-word;
 	color: #000000;
 	margin-bottom: 72px;
 }
@@ -450,6 +532,7 @@ a {
 	color: #f2726f;
 }
 .items-block__item-text {
+	overflow-wrap: break-word;
 	font-weight: 400;
 	line-height: 1.5;
 	letter-spacing: 0.15px;
@@ -460,8 +543,9 @@ a {
 	.promise__header-title {
 		margin-bottom: calc(35px + (72 - 35) * ((100vw - 320px) / (1050 - 320)));
 	}
+	/* Допилить отступ  */
 	.promise {
-		padding-top: calc(100px + (280 - 100) * ((100vw - 320px) / (1050 - 320)));
+		padding-top: calc(100px + (148 - 100) * ((100vw - 320px) / (1050 - 320)));
 	}
 }
 /* 35px .promise__header-title*/
@@ -477,6 +561,7 @@ a {
 .dog-pag__container {
 	max-width: 1440px;
 	display: flex;
+	column-gap: 72px;
 }
 .dog-pag__img {
 	position: relative;
@@ -484,14 +569,17 @@ a {
 	right: 16px;
 }
 .dog-pag__content {
-	padding-top: 112px;
-	margin-left: 72px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	max-width: 411px;
 }
 .dog-pag__content-title:not(:last-child) {
 	margin-bottom: 45px;
 }
 .dog-pag__content-title {
+	overflow-wrap: break-word;
 	font-weight: 900;
 	font-size: 36px;
 	line-height: 1.16;
@@ -504,6 +592,7 @@ a {
 }
 
 .dog-pag__buttom {
+	align-self: flex-start;
 	font-weight: 700;
 	font-size: 12px;
 	line-height: 1;
@@ -517,10 +606,8 @@ a {
 	text-align: center;
 	transition: 0.3s ease-in;
 }
+/* Понять нафига он нужен тут ??? */
 @media (max-width: 1133px) {
-	.dog-pag__content {
-    margin-left: 20px;
-}
 	.dog-pag__img img {
 		width: 500px;
 	}
@@ -617,6 +704,7 @@ a {
 	background: url("../img/services_page/blue_overline_mark.svg") 1px -1px no-repeat;
 }
 .services__header-title {
+	overflow-wrap: break-word;
 	color: #000000;
 	margin-bottom: 78px;
 }
@@ -816,9 +904,13 @@ a {
 	display: flex;
 	flex-direction: column;
 	row-gap: 56px;
+
+
 }
 
 .registration-content__title {
+	max-width: 324px;
+	overflow-wrap: break-word;
 	font-weight: 900;
 	font-size: 30px;
 	line-height: 1.2;
@@ -827,12 +919,16 @@ a {
 }
 
 .registration-content__label {
+	max-width: 324px;
+	overflow-wrap: break-word;
 	font-weight: 900;
 	font-size: 96px;
 	line-height: 56px;
 	color: #ffffff;
 }
 .registration-content__text {
+	max-width: 324px;
+	overflow-wrap: break-word;
 	font-weight: 900;
 	font-size: 19px;
 	line-height: 26px;
@@ -884,6 +980,7 @@ a {
 }
 
 .costumers__header-title {
+	overflow-wrap: break-word;
 	color: #000000;
 	margin: 0;
 }
@@ -895,6 +992,8 @@ a {
 	column-gap: 24px;
 }
 .card-items {
+	flex-wrap: wrap;
+	row-gap: 20px;
 }
 .card-item:hover,
 .card-item:focus {
@@ -905,7 +1004,8 @@ a {
 	padding: 45px 45px 40px 45px;
 	background: #ffffff;
 	border-radius: 20px;
-	min-width: 324px;
+	flex: 1 1 324px;
+	box-shadow: -7px 5px 5px -3px rgba(0,0,0,0.32);
 }
 .card-item__body {
 	flex: 1 1 237px;
@@ -914,6 +1014,7 @@ a {
 	margin-bottom: 18px;
 }
 .card-item__bio {
+	overflow-wrap: break-word;
 }
 .card-item__name {
 	display: flex;
@@ -979,7 +1080,7 @@ a {
 }
 
 .impact-header__title {
-	max-width: 411px;
+	max-width: 411px; 
 	margin-right: 82px;
 }
 .impact__header-logo {
@@ -992,6 +1093,7 @@ a {
 }
 
 .impact__header-title {
+	overflow-wrap: break-word;
 	margin-bottom: 75px;
 }
 .impact-header__img img {
